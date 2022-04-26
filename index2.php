@@ -45,9 +45,13 @@
 
 <!-- Adding a JavaScript button that calculates mass --> 
    <form action="./results2.php" method="post" target="results">
-    <h1 style="background-color:palevioletred"><font face="Garamond">Mass Program, with JS</font></h1>
+    <?php
+    echo "<h1>Mass Program, with PHP</h1>";
+    ?>
     <p>
-      <h3 style="background-color:moccasin"><font face="Garamond">Please enter your information:</font></h3>
+      <?php
+      echo "<h3>Please enter your information:</h3>";
+      ?>
       <form action="javascript:onButtonClick()">
         <label for="density">The density (kg/m<sup>3</sup>)</label>
         <input type="number" step="0.01" name="density" placeholder="Density in kilograms/metres cubed"><br><br>
@@ -65,8 +69,8 @@
       <center><img src="./images/mars.gif"></center>
 
 <!-- Link back to home page -->
-    <center><h6>
-      Here is the link that will take you back to to my <a href="./index.php">Home WebPage</a>
+    <center>
+      <h6>Here is the link that will take you back to to my <a href="./index.php">Home WebPage</a>
     </h6>
    </center>
   </body>

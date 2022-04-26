@@ -16,8 +16,8 @@
 <!-- Link to CSS sheet -->
     <link rel="stylesheet" href="./css/style.css">
   </head>
-
-<!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
+  <body>
+    <!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Second webpage</span>
@@ -29,10 +29,7 @@
     <div class="page-content"><!-- Your content goes here --></div>
   </main>
 </div>
-  
 <!-- Getting text over an image --> 
-  <body>
-
     <div class="container">
     <img src="./images/steve.jpg" alt="Density" style="width:100%;">
     <h2 style="color:black"><font face="Times New Roman"><div class="centered">Calculating the density from volume and mass</div></h2>
@@ -52,10 +49,12 @@
    <form action="./results.php" method="post" target="results">
   <center>
     <?php
-     echo "<h1>Density Program, with JS</h1>";
+     echo "<h1>Density Program, with PHP</h1>";
      ?>
     <p>
-    <h3>Please enter your information:</h3>
+    <?php
+     echo "<h3>Please enter your information:</h3>";
+    ?>
       <form action="javascript:onButtonClick()">
         <label for="weight">The mass in kg</label>
         <input type="number" step="0.01" name="mass" placeholder="Mass in kilograms"><br><br>
@@ -67,8 +66,8 @@
   </center>
 
 <!-- Adding an iframe -->
-          <iframe id="results" name="results">		
-		</iframe>
+          <center><iframe id="results" name="results">		
+		</iframe></center>
 		
 <!-- Adding a MDL button -->
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -88,8 +87,12 @@
 
 <!-- A table -->
   <center>
-    <h2 style="background-color:lightpink"><font face="Garamond">Densities of different liquids</font></h2>
-      <h6>This table shows you what the different density levels of various liquids are</h6>
+    <?php
+    echo "<h2>Densities of different liquids</h2>";
+    ?>
+    <?php
+    echo "<h6>This table shows you what the different density levels of various liquids are</h6>";
+    ?>
  <table border="1">
           <tr>
             <th>Water</th>
@@ -110,7 +113,9 @@
 
 <!-- An ordered list -->
 <center>
-  <h2 style="background-color:lightyellow"><font face="Garamond">~ The densest cities (pop/mi<sup>2</sup>) ~</font></h2>
+  <?php
+  echo "<h2>~ The densest cities (pop/mi<sup>2</sup>) ~</h2>";
+  ?>
   <ol>
     <li>Manila, Philippines (119,600/mi<sup>2</sup>)</li>
     <li>Pateros, Philippines (94,400/mi<sup>2</sup>)</li>

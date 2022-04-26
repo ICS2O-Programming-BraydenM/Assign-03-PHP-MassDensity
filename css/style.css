@@ -46,6 +46,21 @@ body {
   font-family: times new roman;
 }
 
+h1 {
+  background-color: red;
+  font-family: Garamond, Times New Roman, serif;
+}
+
+h3 {
+  background-color: #848cc8;
+  font-family: Garamond, Times New Roman, serif;
+}
+
+h2 {
+  background-color: #c5e359;
+  font-family: Garamond, Times New Roman, serif;
+}
+
 .glow {
   font-size: 80px;
   color: #fff;
