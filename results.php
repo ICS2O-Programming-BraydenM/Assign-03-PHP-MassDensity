@@ -10,5 +10,5 @@
   $density_rounded = number_format($density, 2);
 ?>
 <center>
- The density would be <?php echo "$density_rounded"; ?> 
+ The density would be <?php echo "$density_rounded"; ?> kg/m<sup>3</sup>
 </center>

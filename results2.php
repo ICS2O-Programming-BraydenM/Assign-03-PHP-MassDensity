@@ -8,8 +8,7 @@
   // calculate the mass from density and volume;
   $mass = $density * $volume;
   $mass_rounded = number_format($mass, 2);
-  
 ?>
 <center>
- The mass would be <?php echo "$mass_rounded"; ?> 
+ The mass would be <?php echo "$mass_rounded"; ?> kg
 </center>

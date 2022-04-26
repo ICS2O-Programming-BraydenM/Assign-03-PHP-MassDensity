@@ -7,11 +7,6 @@
     <meta name="keywords" content="immaculata, ics2o">
     <meta name="author" content="Brayden MacMillan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- For the favicon on this page -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
 
 <!-- To use Google's MDL -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -27,7 +22,7 @@
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Second webpage</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="https://assign-03-html-massdensity.braydenmacmill1.repl.co/index2.html">Mass</a>
+      <a class="mdl-navigation__link" href="https://assign-03-php-massdensity.braydenmacmill1.repl.co/index2.php">Mass</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -39,7 +34,7 @@
   <body>
 
     <div class="container">
-    <img src="./images/mass.jpg" alt="BMI" style="width:100%;">
+    <img src="./images/steve.jpg" alt="Density" style="width:100%;">
     <h2 style="color:black"><font face="Times New Roman"><div class="centered">Calculating the density from volume and mass</div></h2>
     </div>
 
@@ -51,14 +46,16 @@
     <h1 class="glow" style="background-color:darkred">~ Formula ~</h1>
 
 <!-- Inserting an image shoing the formula for Density -->
-    <center><img src="./images/density.png" width="800" length="900"></center>
+    <center><img src="./images/density-formula.png" width="800" length="900"></center>
 
 <!-- Adding a JavaScript button that calculates density--> 
-    <script src="./js/script.js"></script>
+   <form action="./results.php" method="post" target="results">
   <center>
-    <h1 style="background-color:palevioletred"><font face="Garamond">Density Program, with JS</font></h1>
+    <?php
+     echo "<h1>Density Program, with JS</h1>";
+     ?>
     <p>
-      <h3 style="background-color:moccasin"><font face="Garamond">Please enter your information:</font></h3>
+    <h3>Please enter your information:</h3>
       <form action="javascript:onButtonClick()">
         <label for="weight">The mass in kg</label>
         <input type="number" step="0.01" name="mass" placeholder="Mass in kilograms"><br><br>
@@ -69,12 +66,10 @@
     </p>
   </center>
 
-<!-- Create a space where the user information will be displayed -->
-  <center>
-      <div id="display-results"></div>
-  </center>
+<!-- Adding an iframe -->
+          <iframe id="results" name="results">		
+		</iframe>
 		
-
 <!-- Adding a MDL button -->
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
